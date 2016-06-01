@@ -286,6 +286,7 @@
 				62B1E5971CE804020029D542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

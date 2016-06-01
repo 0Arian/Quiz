@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -23,13 +23,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFw-Vj-AfK">
-                                <rect key="frame" x="251" y="57" width="98" height="30"/>
-                                <state key="normal" title="Next Question"/>
-                                <connections>
-                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7p-Ax-sUv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyB-zo-r7a">
                                 <rect key="frame" x="254" y="318" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
@@ -43,22 +36,40 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mI-Xm-N8h">
+                                <rect key="frame" x="279" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFw-Vj-AfK">
+                                <rect key="frame" x="251" y="57" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7p-Ax-sUv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Gv-ic-g81" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5hU-li-qS8"/>
+                            <constraint firstItem="7mI-Xm-N8h" firstAttribute="top" secondItem="9Gv-ic-g81" secondAttribute="top" id="7N3-nh-hhr"/>
+                            <constraint firstItem="AFw-Vj-AfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYI-Zv-IoU"/>
                             <constraint firstItem="AFw-Vj-AfK" firstAttribute="top" secondItem="9Gv-ic-g81" secondAttribute="bottom" constant="8" id="FZs-zX-VNS"/>
                             <constraint firstItem="jyB-zo-r7a" firstAttribute="centerX" secondItem="AFw-Vj-AfK" secondAttribute="centerX" id="M8C-KD-QGs"/>
                             <constraint firstItem="jyB-zo-r7a" firstAttribute="top" secondItem="mdN-1e-paL" secondAttribute="bottom" constant="8" id="Ndk-rR-iyU"/>
                             <constraint firstItem="mdN-1e-paL" firstAttribute="centerX" secondItem="AFw-Vj-AfK" secondAttribute="centerX" id="OX6-UN-q7l"/>
-                            <constraint firstItem="9Gv-ic-g81" firstAttribute="centerX" secondItem="AFw-Vj-AfK" secondAttribute="centerX" id="fWV-M9-DiC"/>
+                            <constraint firstItem="7mI-Xm-N8h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XqD-cu-Uvp"/>
                             <constraint firstItem="mdN-1e-paL" firstAttribute="top" secondItem="AFw-Vj-AfK" secondAttribute="bottom" constant="202" id="ivn-S3-Le8"/>
                             <constraint firstItem="9Gv-ic-g81" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhn-PP-AfU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="mdN-1e-paL" id="6bs-88-XrF"/>
-                        <outlet property="questionLabel" destination="9Gv-ic-g81" id="W3P-Zo-1uu"/>
+                        <outlet property="currentQuestionLabel" destination="9Gv-ic-g81" id="7OH-4d-fQT"/>
+                        <outlet property="c​u​r​r​e​n​t​Q​u​e​s​t​i​o​n​L​a​b​e​l​C​e​n​t​e​r​X​C​o​n​s​t​r​a​i​n​t​" destination="rhn-PP-AfU" id="zrh-vb-BXf"/>
+                        <outlet property="nextQuestionLabel" destination="7mI-Xm-N8h" id="4CF-Xd-0rG"/>
+                        <outlet property="n​e​x​t​Q​u​e​s​t​i​o​n​L​a​b​e​l​C​e​n​t​e​r​X​C​o​n​s​t​r​a​i​n​t​" destination="XqD-cu-Uvp" id="aTc-DP-aOt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
